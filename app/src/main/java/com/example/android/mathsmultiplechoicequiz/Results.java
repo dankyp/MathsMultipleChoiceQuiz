@@ -17,10 +17,11 @@ public class Results extends AppCompatActivity {
         TextView scoreLabel = (TextView) findViewById(R.id.scoreLabel);
 
         int score = getIntent().getIntExtra("Score: ", 0);
-        scoreLabel.setText(score + "");
+        scoreLabel.setText(String.valueOf(score));
 
     }
-    public void tryAgain (View view){
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+    public void tryAgain(View view) {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }
